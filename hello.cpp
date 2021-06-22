@@ -1,4 +1,5 @@
 #include<iostream>
+#include<map>
 using namespace std;
 void substraction();
 //extern int a;
@@ -6,47 +7,17 @@ void substraction();
 //extern int c;
 
 int main(){
-	typedef int jinang;  //typedef Declarations
-	jinang n=5;  
-	cout<<n<<endl;
-	
-	cout<<"hello world!!!!"<<endl;
-	cout<<"size of character ="<<sizeof(char)<<endl;
-	cout<<"size of integer ="<<sizeof(int)<<endl;
-	cout<<"size of long ="<<sizeof(long)<<endl;
-	
-	enum students {jigo,nem,vedant=5,perk};     //Enumerated Types
-	cout<<"....enum...."<<endl;     
-	cout<<jigo<<endl;
-	cout<<nem<<endl;
-	cout<<vedant<<endl;
-	cout<<perk<<endl;
-	
-	float num=50.0000;
-	double nu=5.0000;
-	cout<<num<<endl;
-	cout<<nu<<endl;
-	
-	int a=1;
-	int b=2;
-	int c=a+b;
-	cout<<"sum="<< c <<endl;
-	substraction();
-	return 0;
+	map <string,int> info;
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        int type,marks;
+        string name;
+        cin>>type>>name>>marks;
+        
+    }
+    return 0;
 }
-
-void substraction()
-{
-	int a=2;
-	int b=1;
-	int c=a-b;
-	cout <<"substraction="<< c <<endl;
-}
-
-
-
-
-
 
 
 
