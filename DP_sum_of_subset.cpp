@@ -37,13 +37,13 @@ int dp_sos(int set[],int n, int sum){      //time complexity : 0(sum*n)
 		}
 	} 
 	
-	/* print dp[][] table
+	//print dp[][] table
 	for (int i = 0; i <= n; i++)
      {
        for (int j = 0; j <= sum; j++)
           printf ("%4d", dp[i][j]);
        printf("\n");
-     }  */
+     }  
 	
 	return dp[n][sum];   
 	
@@ -72,13 +72,24 @@ int dp_sos_2(int set[],int n, int sum){            //time complexity : 0(sum*2)
 			else{
 				dp[cur][i] = dp[prev][i-set[count]];
 			}
-    	}	
-    	cur =  toggle(cur);
-		prev =  toggle(prev);
-		count++;
+    	}
+		if(count <= n-1){
+	    	cur =  toggle(cur);
+			prev =  toggle(prev);
+			
+	    }
+	    count++;
 		//error
+		
 	}
-	return dp[n][sum];      
+	int temp;
+	if(sum%2 == 0){
+		temp = 1;
+	}
+	else{
+		temp = 0;
+	}
+	return dp[temp][sum];      
 }
 
 
@@ -88,8 +99,8 @@ int toggle(int x){
 
 
 int main(){
-	int set[] = { 10,20,30,40 };
-    int sum = 100;
+	int set[] = { 1, 2, 4, 3, 5 };
+    int sum = 8;
 	int n = sizeof(set)/sizeof(set[0]); 
 	if (dp_sos(set, n, sum) == true)
         printf("TRUE");
