@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<iostream>
+#include<bits/stdc++.h>
 #include<list>
 using namespace std;
 
@@ -22,7 +23,7 @@ public:
    void printGraph(){
    	  for(int i=0;i<V;i++){
    	    cout<<"Vertext : "<<i<<endl<<"head->";
-   	    for(int x:l[i]){
+   	    for(auto x :l[i]){
    	        cout<<x<<"->";	
 		}
 		cout<<endl;
